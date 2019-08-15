@@ -14,11 +14,12 @@ for /F "delims=" %%i in ("%~1") do set "_playlist=%%~ni.lpl"
 ) >"%_playlist%"
 set /A "_numroms=0"
 for /F "usebackq tokens=*" %%A in ("%~1") do set /A "_numroms+=1"
-setlocal EnableDelayedExpansion
+setlocal EnableExtensions DisableDelayedExpansion
 set /A "_currentrom=0"
 for /F "usebackq tokens=*" %%A in ("%~1") do (
   set /A "_currentrom+=1"
   set rompath=%%A
+  setlocal EnableDelayedExpansion
   set escaped=!rompath:\=\\!
   set romname=
   for /F "delims=" %%i in ("!rompath!") do set romname=%%~ni
@@ -40,6 +41,7 @@ for /F "usebackq tokens=*" %%A in ("%~1") do (
     echo !line7!
     echo !line8!
   ) >>"%_playlist%"
+  endlocal
 )
 endlocal
 (
