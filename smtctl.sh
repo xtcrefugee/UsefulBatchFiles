@@ -1,7 +1,7 @@
 #!/bin/sh
 export HISTIGNORE='*sudo -S*'
 smtopt="none"
-rootpw="your_root_password"
+rootpw="your_sudo_password"
 while getopts hs: opt; do
   case $opt in
     h)
