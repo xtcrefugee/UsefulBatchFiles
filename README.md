@@ -20,3 +20,12 @@ This is a really basic example python script for controlling VeSync-enabled devi
 This features only the relevant options/values for controlling Levoit Core 200S air purifiers, but can be easily adapted for other VeSync purifiers or as an example for other VeSync-compatible devices. You will need to already have a VeSync account and to have added your devices to your account with the VeSync app.
 
 For available command line options run `vesync.py -h`, and to list all VeSync devices on your account run `vesync.py -i`
+
+## smtctl.sh & smtgui.sh
+Some simple shell scripts to control the SMT (simultaneous multithreading) state of a CPU under Linux, intended for use on the Valve Steam Deck. **smtctl.sh** can be used to enable, disable, or display the status of SMT. **smtgui.sh** uses KDE's kdialog to produce a popup dialogue for the former, allowing changes without needing to use the console. These allow you to control SMT from a shortcut added to Steam as a non-Steam game, in both desktop mode and SteamOS's game mode, without needing to enter the root password every time. This means you can easily change the SMT status on the fly without needing other third-party tools like Decky loader and the PowerTools plugin.
+
+To install, in desktop mode place both scripts in a folder somewhere inside your home directory, such as `/home/deck/scripts`, open a console window in that folder and enter `chmod 755 smtctl.sh` and `chmod 755 smtgui.sh` to make both scripts executable. You will also need to set a sudo password in the console using `passwd` if you have not done so already, and replace *your_sudo_password* in smtctl.sh with this sudo password. You can then add smtgui.sh to Steam by right clicking on it in the Dolphin file manager and selecting the option to add to Steam. I have included some Steam graphics for the shortcut in [/assets/steam](/assets/steam).
+
+![smtgui.sh popup dialog under KDE.](/assets/images/smtgui.png)
+
+**smtctl.sh** is also usable in the console, with the options `smtctl.sh -h` for help/status, and `smtctl.sh -s on` and `smtctl.sh -s off` to control SMT.
