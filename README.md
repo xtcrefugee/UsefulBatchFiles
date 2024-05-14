@@ -29,3 +29,6 @@ To install, in desktop mode place both scripts in a folder somewhere inside your
 ![smtgui.sh popup dialog under KDE.](/assets/images/smtgui.png)
 
 **smtctl.sh** is also usable in the console, with the options `smtctl.sh -h` for help/status, and `smtctl.sh -s on` and `smtctl.sh -s off` to control SMT.
+
+## steamcsspatcher.ps1
+A powershell script to remove the What's New, Add Shelf and (optionally) left column from Valve's Steam client. Updated for May 2024 when the css was changed to obfuscate element names. Just straight text substitution, no RegEx, so if the rules are changed at all this script will need to be updated.
