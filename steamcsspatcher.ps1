@@ -24,7 +24,7 @@ if (Test-Path $css_path\$css_name) {
     $css_output = $css_input.Replace($str_whatsnew,$str_nowhatsnew).Replace($str_addshelf,$str_noaddshelf).Replace($str_leftcolumn,$str_noleftcolumn)
     #
     # Backup the original file and write the new one
-    Rename-Item $css_path\$css_name $css_path\$css_name.backup
+    Move-Item $css_path\$css_name $css_path\$css_name.backup -Force
     Set-Content $css_path\$css_name -NoNewline -Value $css_output
     [System.Windows.MessageBox]::Show($css_name+" patched successfully, What's New removed.","Steam CSS Patcher")
   } else {
