@@ -35,3 +35,8 @@ To install, in desktop mode place both scripts in a folder somewhere inside your
 
 ## steamcsspatcher.ps1
 A powershell script to remove the What's New, Add Shelf and (optionally) left column from Valve's Steam client. Updated for May 2024 when the css was changed to obfuscate element names. Just straight text substitution, no RegEx, so if the rules are changed at all this script will need to be updated.
+
+If you get an error in powershell saying running scripts is disabled, you can open a powershell session as admin and run this to allow local scripts:
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
