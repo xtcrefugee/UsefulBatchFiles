@@ -41,4 +41,4 @@ If you get an error in powershell saying running scripts is disabled, you can op
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
-I've added a simple batch file switcher for changing between the modded and original css, `steamcssswitcher.cmd`. This will create/update a .modded file for the changes made by the patcher. I probably shouldn't have used a batch file to do this as fc is really slow for comparing two files, but switching css isn't something I'm doing often enough to bother checking if powershell could do it faster.
+I've added a simple powershell file switcher for changing between the modded and original css, `steamcssswitcher.ps1`. This will create/update a .modded file for the changes made by the patcher. For reference there's also a batch file version of the switcher, but fc is really slow for comparing two files vs the hashing used in the powershell script.
