@@ -3,7 +3,7 @@ Add-Type -AssemblyName PresentationFramework
 #
 # Path to your Steam css directory, and the css filename
 $css_path = "C:\Program Files (x86)\Steam\steamui\css"
-$css_name = "chunk~2dcc5aaf7.css"
+$css_name = "sp.css"
 $result = ""
 #
 if ((Test-Path $css_path\$css_name) -And (Test-Path $css_path\$css_name.backup)) {
