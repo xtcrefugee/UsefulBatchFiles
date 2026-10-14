@@ -1,5 +1,5 @@
 @echo off
-set "steamcss=C:\Program Files (x86)\Steam\steamui\css\chunk~2dcc5aaf7.css"
+set "steamcss=C:\Program Files (x86)\Steam\steamui\css\sp.css"
 set "missingcss="
 if not exist "%steamcss%.backup" set "missingcss=1"
 if not exist "%steamcss%" set "missingcss=1"
